@@ -1,4 +1,4 @@
-.DEFAULT_GOAL := build # defaut target if not arg is supplied after the make keyword
+.DEFAULT_GOAL := run # defaut target if not arg is supplied after the make keyword
 
 .PHONY:fmt vet build # helps make to not confuse the targets below with other files in our directory.
 # The lines below define the targets (commands) make will run.
