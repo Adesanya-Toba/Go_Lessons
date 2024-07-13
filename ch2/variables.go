@@ -2,6 +2,14 @@ package main
 
 import "fmt"
 
+// Package level constants
+const var1 int = 100
+const (
+	name = "Jane Doe"
+	age  = 24
+)
+const var2 = 20 * 10
+
 func main() {
 	// Creating new variables
 	var x int = 20
@@ -42,9 +50,13 @@ func main() {
 	a1 = 80
 	fmt.Println(a1, a3)
 
-	// Declaring variables
+	// Modifying variables
 	x *= 2 // = 40
 	fmt.Println(x, y)
+
+	// Function constant
+	const func_var3 = "Hello from main!"
+	fmt.Println(var1, var2, name, age, func_var3)
 
 	// Using a function from a different package. Neat!
 	rune_func()
