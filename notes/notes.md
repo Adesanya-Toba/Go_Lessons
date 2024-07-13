@@ -11,4 +11,9 @@ In fact, no other type can be converted to a bool, implicitly or explicitly. If 
 For example, to check if variable x is equal to 0, the code would be x == 0. If you want to check if string s is empty, use s == "".
 
 ### On the ':=' Operator
-Using := has one limitation. If you are declaring a variable at the package level, you must use var because := is not legal outside of functions. 
+Using := has one limitation. If you are declaring a variable at the package level, you must use var because := is not legal outside of functions.
+
+### On Variable Names
+Go doesn’t use **snake case** (names like `index_counter` or `number_tries`). Instead, idiomatic Go uses **camel case** (names like `indexCounter` or `numberTries`) when an identifier name consists of multiple words.
+
+In many languages, constants are always written in all uppercase letters, with words separated by underscores (names like `INDEX_COUNTER` or `NUMBER_TRIES`). Go **does not** follow this pattern. This is because Go uses the case of the first letter in the name of a package-level declaration to determine if the item is accessible outside the package

@@ -3,12 +3,12 @@ package main
 import "fmt"
 
 // Package level constants
-const var1 int = 100
+const var1 int = 100 // Typed constant
 const (
 	name = "Jane Doe"
 	age  = 24
 )
-const var2 = 20 * 10
+const var2 = 20 * 10 // Untyped constant
 
 func main() {
 	// Creating new variables
@@ -58,6 +58,11 @@ func main() {
 	const func_var3 = "Hello from main!"
 	fmt.Println(var1, var2, name, age, func_var3)
 
+	// Assigning a constant to variable
+	var decimal1 float64 = var2
+	var decimal2 int = var2
+	fmt.Println(decimal1, decimal2)
+
 	// Using a function from a different package. Neat!
 	rune_func()
 
@@ -67,5 +72,23 @@ func main() {
 
 	var sum1 float64 = float64(a) + b
 	fmt.Printf("The sum is %.2f \n", sum1)
+
+	// Run Ch2 exercise
+	ch2Exercise()
+}
+
+func ch2Exercise() {
+	var b byte
+	var smallI int32
+	var bigI uint64
+
+	// Assigning maximum values to each
+	b = 255
+	smallI = 2_147_483_647
+	bigI = 18_446_744_073_709_551_615
+
+	fmt.Println(b + 1)
+	fmt.Println(smallI + 1)
+	fmt.Println(bigI + 1)
 
 }
