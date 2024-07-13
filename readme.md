@@ -17,4 +17,4 @@ go build -o build/go_app
 ./executable_name
 ```
 
-Alternatively, just run `make` using the `M### Build a Go Program withakefile` in the directory.
+Alternatively, just run `make` using the `Makefile` in the directory.
