@@ -9,3 +9,6 @@ Go also has a type that represents a single code point. The `rune` type is an al
 **Go doesn’t allow truthiness.**
 In fact, no other type can be converted to a bool, implicitly or explicitly. If you want to convert from another data type to boolean, you must use one of the comparison operators (==, !=, >, <, <=, or >=).
 For example, to check if variable x is equal to 0, the code would be x == 0. If you want to check if string s is empty, use s == "".
+
+### On the ':=' Operator
+Using := has one limitation. If you are declaring a variable at the package level, you must use var because := is not legal outside of functions. 
