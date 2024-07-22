@@ -16,4 +16,12 @@ Using := has one limitation. If you are declaring a variable at the package leve
 ### On Variable Names
 Go doesn’t use **snake case** (names like `index_counter` or `number_tries`). Instead, idiomatic Go uses **camel case** (names like `indexCounter` or `numberTries`) when an identifier name consists of multiple words.
 
-In many languages, constants are always written in all uppercase letters, with words separated by underscores (names like `INDEX_COUNTER` or `NUMBER_TRIES`). Go **does not** follow this pattern. This is because Go uses the case of the first letter in the name of a package-level declaration to determine if the item is accessible outside the package
+In many languages, constants are always written in all uppercase letters, with words separated by underscores (names like `INDEX_COUNTER` or `NUMBER_TRIES`). Go **does not** follow this pattern. This is because Go uses the case of the first letter in the name of a package-level declaration to determine if the item is accessible outside the package.
+
+### On Multidimensional Arrays
+Go has only one-dimensional arrays, but you can simulate multidimensional arrays:
+```Go
+var x [2][3]int
+```
+This declares `x` to be an array of length 2 whose type is an array of `ints` of length 3.
+This sounds pedantic, but some languages have true matrix support, like Fortran or Julia; Go isn’t one of them.
