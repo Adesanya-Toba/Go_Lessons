@@ -25,3 +25,10 @@ var x [2][3]int
 ```
 This declares `x` to be an array of length 2 whose type is an array of `ints` of length 3.
 This sounds pedantic, but some languages have true matrix support, like Fortran or Julia; Go isn’t one of them.
+
+### On Array Limitations
+Go considers the size of the array to be part of the type
+of the array. This makes an array that’s declared to be [3]int a different type from
+an array that’s declared to be [4]int. This also means that you cannot use a variable
+to specify the size of an array, because types must be resolved at compile time, not at
+runtime.
