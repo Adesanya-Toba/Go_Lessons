@@ -1,20 +1,8 @@
 # Learning Go!
-Using the amazing book by *Jon Bodner: Learning Go An Idiomatic Approach to Real-World Go Programming*
 
-### Create a Go Module
-A Go project is called a **module**. A module is not just source code. It is also an exact specification of the dependencies of the code within the module. Every module has a go.mod file in its root directory.
-```bash
-go mod init <program_name>
-```
+Using the amazing books:
 
-### Build a Go Program with
-```bash
-go build -o build/go_app
-```
+- _John Arundel (JA): The Deeper Love of Go_
+- _Jon Bodner (JB): Learning Go An Idiomatic Approach to Real-World Go Programming_
 
-### Run a Go Program with
-```bash
-./executable_name
-```
-
-Alternatively, just run `make` using the `Makefile` in the directory.
+Go Version: `1.27.1`
