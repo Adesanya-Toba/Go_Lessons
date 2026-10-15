@@ -9,25 +9,15 @@ type Book struct {
 	Copies int
 }
 
-// func TestBookToString_FormatsBookInfoAsString() {
-// 	input := Book{
-// 		Title:  "Sea Room",
-// 		Author: "Adam Nicolson",
-// 		Copies: 2,
-// 	}
-
-// 	want := "Sea Room by Adam Nicolson - 2 copies"
-// 	got := BookToString(input)
-
-// 	if want != got {
-// 		panic("BookToString: wrong result")
-// 	}
-// }
-
 func BookToString(book Book) string {
-	return fmt.Sprintf("%v b %v - %v copies", book.Title, book.Author, book.Copies)
+	return fmt.Sprintf("%v by %v - %v copies", book.Title, book.Author, book.Copies)
 }
 
 func main() {
-	fmt.Println("It's all good!")
+	book := Book{
+		Title:  "Engineering in plain sight",
+		Author: "Grady Hillhouse",
+		Copies: 2,
+	}
+	fmt.Println(BookToString(book))
 }
