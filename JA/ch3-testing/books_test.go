@@ -1,18 +1,22 @@
-package main
+package books_test
 
-import "testing"
+import (
+	"books"
+	"testing"
+)
 
 func TestBookToString_FormatsBookInfoAsString(t *testing.T) {
-	input := Book{
+	input := books.Book{
 		Title:  "Sea Room",
 		Author: "Adam Nicolson",
 		Copies: 2,
 	}
 
-	want := "Sea Room by Adam Nicolson - 2 copies"
-	got := BookToString(input)
+	want := "Sea Room by Adam Nicolson (copies: 2)"
+	got := books.BookToString(input)
 
 	if want != got {
+		// %q means quoted strings
 		t.Fatalf("want: %q, got: %q", want, got)
 	}
 }
